@@ -22,6 +22,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'henrik/vim-indexed-search'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
@@ -42,4 +45,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+
+" Reamp default bindings: toggle -> cc, comment -> c<space>
+map <leader>c<space> <plug>NERDCommenterComment
+map <leader>cc <plug>NERDCommenterToggle
 
