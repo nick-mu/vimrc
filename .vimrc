@@ -24,18 +24,18 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'henrik/vim-indexed-search'
-
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
-
 set mouse=a
 syntax enable
 colorscheme dracula
 set nu
 imap jj <Esc>
 nmap <CR> o<Esc>
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -55,4 +55,9 @@ let g:NERDTrimTrailingWhitespace = 1
 " Reamp default bindings: toggle -> cc, comment -> c<space>
 map <leader>c<space> <plug>NERDCommenterComment
 map <leader>cc <plug>NERDCommenterToggle
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
