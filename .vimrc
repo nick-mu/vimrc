@@ -71,5 +71,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " nerd tree stuff
+" close nerd tree if no other tabs 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
+" open by default
+autocmd vimenter * NERDTree
